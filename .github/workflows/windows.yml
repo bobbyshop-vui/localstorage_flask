@@ -28,6 +28,5 @@ jobs:
 
       - name: Run the script and stop after 3 seconds
         run: |
-          set -e  # Dừng quá trình nếu có lỗi
           timeout /t 3 && python main.py  # Sử dụng timeout của Windows
         continue-on-error: true  # Bỏ qua lỗi và không làm thất bại CI
