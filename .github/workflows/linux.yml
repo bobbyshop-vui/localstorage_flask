@@ -26,10 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install Flask
 
-      - name: Install coreutils (for gtimeout)
-        run: sudo apt-get install coreutils  # Sử dụng apt-get trên Ubuntu thay vì brew
+      - name: Install coreutils (for timeout)
+        run: sudo apt-get install coreutils  # Cài đặt coreutils nếu chưa có sẵn
 
       - name: Run the script and stop after 3 seconds
         run: |
           set -e  # Dừng quá trình nếu có lỗi
-          gtimeout 3s python main.py  # Sử dụng gtimeout để giới hạn thời gian chạy
+          timeout 3s python main.py  # Sử dụng timeout thay vì gtimeout
