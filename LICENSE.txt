@@ -1,0 +1,4 @@
+MIT License
+Copyright (c) 2024 Lê Đình Quốc Hưng
+Được phép sử dụng, sao chép, sửa đổi, hợp nhất, xuất bản, phân phối, cấp phép lại và bán bản sao của phần mềm này, tóm lại là hoàn toàn có quyền miễn là có thông báo bản quyền và thông báo giấy phép trong tất cả các bản sao hoặc phần mềm phân phối lại.
+Phần mềm này được cung cấp "như là" mà không có bất kỳ bảo đảm nào, rõ ràng hay ngụ ý, bao gồm nhưng không giới hạn ở các bảo đảm về tính khả dụng cho một mục đích cụ thể, hoặc không vi phạm. Trong bất kỳ trường hợp nào, tác giả hoặc chủ sở hữu bản quyền không chịu trách nhiệm cho bất kỳ yêu cầu, thiệt hại hoặc trách nhiệm nào, dù trong hợp đồng, sai sót (bao gồm sơ suất) hay trách nhiệm pháp lý khác, phát sinh từ hoặc liên quan đến phần mềm hoặc việc sử dụng hoặc các giao dịch trong phần mềm này.

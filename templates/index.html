@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+    <h1>Welcome to LocalStorageFlask</h1>
+    <p>Open the browser's console to see localStorage operations in action.</p>
+
+    <h2>LocalStorage Data:</h2>
+    <p id="username">Username: </p>
+    <p id="theme">Theme: </p>
+
+    <button id="fetchDataBtn">Fetch LocalStorage Data</button>
+
+    <script>
+        document.getElementById("fetchDataBtn").addEventListener("click", function() {
+            // Hiển thị giá trị từ localStorage vào các phần tử trên HTML
+            document.getElementById("username").innerText = "Username: " + username;
+            document.getElementById("theme").innerText = "Theme: " + theme;
+        });
+    </script>
+</body>
+</html>
