@@ -26,28 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install Flask
 
-      - name: Run Python script with timeout and continue on error
+      - name: Run the script and stop after 3 seconds
         run: |
-          python -c "
-import subprocess
-import sys
-
-try:
-    result = subprocess.run(
-        [sys.executable, 'main.py'],  # Chạy main.py
-        timeout=3,  # Timeout sau 3 giây
-        capture_output=True,  # Lưu kết quả stdout và stderr
-        text=True  # Chuyển đổi output thành chuỗi
-    )
-
-    print(result.stdout)  # In kết quả nếu chạy thành công
-    print(result.stderr)  # In lỗi nếu có lỗi xảy ra
-
-except subprocess.TimeoutExpired:
-    print('Script bị timeout sau 3 giây.')
-    sys.exit(1)  # Quay lại lỗi khi timeout
-except Exception as e:
-    print(f'Lỗi xảy ra: {e}')
-    sys.exit(1)
-"
-        continue-on-error: true  # Tiếp tục CI ngay cả khi có lỗi xảy ra
+          python run.py
+        continue-on-error: true  # Bỏ qua lỗi và không làm thất bại CI
