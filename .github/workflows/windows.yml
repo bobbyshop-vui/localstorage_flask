@@ -28,5 +28,5 @@ jobs:
 
       - name: Run the script and stop after 3 seconds
         run: |
-          timeout /t 3 && python main.py  # Sử dụng timeout của Windows
+          powershell -Command "Start-Process python main.py -Wait -Timeout 3000"
         continue-on-error: true  # Bỏ qua lỗi và không làm thất bại CI
