@@ -1,0 +1,35 @@
+name: Python CI Linux
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Chạy trên Ubuntu (Linux)
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install Flask
+
+      - name: Install coreutils (for gtimeout)
+        run: sudo apt-get install coreutils  # Sử dụng apt-get trên Ubuntu thay vì brew
+
+      - name: Run the script and stop after 3 seconds
+        run: |
+          set -e  # Dừng quá trình nếu có lỗi
+          gtimeout 3s python main.py  # Sử dụng gtimeout để giới hạn thời gian chạy
