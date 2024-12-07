@@ -25,7 +25,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install Flask
-          pip install kivyandcss
 
       - name: Run Python script with timeout and continue on error
         run: |
@@ -50,5 +49,5 @@ except subprocess.TimeoutExpired:
 except Exception as e:
     print(f'Lỗi xảy ra: {e}')
     sys.exit(1)
-" 
+"
         continue-on-error: true  # Tiếp tục CI ngay cả khi có lỗi xảy ra
